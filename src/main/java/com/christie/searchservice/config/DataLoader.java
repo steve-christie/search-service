@@ -26,6 +26,7 @@ public class DataLoader {
                     .name(faker.name().fullName())
                     .address(faker.address().streetAddress(true))
                     .order(count.incrementAndGet())
+                    .foods(List.of(faker.food().spice(), faker.food().ingredient()))
                     .build());
         }
 

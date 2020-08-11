@@ -8,6 +8,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -25,4 +27,7 @@ public class Person {
 
     @Field
     private int order;
+
+    @Field
+    private List<String> foods;
 }

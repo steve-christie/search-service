@@ -10,6 +10,7 @@ hitting POST /createData will trigger 100 records to be added to the DB
 To get data back out of elastic, hit the elastic api directly.
 
 Sample Queries:
+Where order equals 1
 ```$xslt
 curl --location --request GET 'localhost:9200/something/_search?pretty' \
 --header 'Content-Type: application/json' \
@@ -21,6 +22,7 @@ curl --location --request GET 'localhost:9200/something/_search?pretty' \
     }
 }'
 ```
+where name has a string containing ca
 ```$xslt
 curl --location --request GET 'localhost:9200/something/_search?pretty' \
 --header 'Content-Type: application/json' \
@@ -32,3 +34,4 @@ curl --location --request GET 'localhost:9200/something/_search?pretty' \
     }
 }'
 ```
+Match and Wildcard also work against elements of an array
