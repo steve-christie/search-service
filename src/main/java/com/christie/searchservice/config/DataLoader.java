@@ -1,8 +1,8 @@
 package com.christie.searchservice.config;
 
-import com.github.javafaker.Faker;
 import com.christie.searchservice.domain.Person;
 import com.christie.searchservice.repository.EntityRepository;
+import com.github.javafaker.Faker;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +25,7 @@ public class DataLoader {
             entities.add(Person.builder()
                     .name(faker.name().fullName())
                     .address(faker.address().streetAddress(true))
-                    .order(count.get())
+                    .order(count.incrementAndGet())
                     .build());
         }
 
