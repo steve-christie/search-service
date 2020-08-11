@@ -30,4 +30,10 @@ public class Person {
 
     @Field
     private List<String> foods;
+
+    @Field
+    private List<Pet> pets;
+
+    @Field
+    private List<String> tags;
 }
